@@ -2,7 +2,7 @@
 
 [![npm shield](https://img.shields.io/npm/v/@fern-api/guesty)](https://www.npmjs.com/package/@fern-api/guesty)
 
-The {Company} Node.js library provides access to the Guesty API from JavaScript/TypeScript.
+The Guesty Node.js library provides access to the Guesty API from JavaScript/TypeScript.
 
 ## Documentation
 
@@ -10,12 +10,24 @@ API reference documentation is available [here](https://open-api-docs.guesty.com
 
 ## Usage
 
-[![Try it out](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](TODO)
+[![Try it out](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/typescript-example-using-sdk-built-with-fern-hmpsmt?file=app.ts&view=editor)
 
 ```typescript
-import { TODO } from "TODO";
+import { GuestyApiClient } from '@fern-api/guesty';
 
-const TODO
+const client = new GuestyApiClient({
+  token: 'MY_TOKEN',
+});
+
+const response = await client.calendar.retrieveCalendarSingleListing(
+  '5fa02fa358d2db673e17bc2d',
+  {
+    startDate: '2023-01-01',
+    endDate: '2023-01-30',
+  }
+);
+
+console.log('Received response from Guesty!', response);
 ```
 
 ## Beta status

@@ -1,6 +1,6 @@
 {
     "name": "@fern-api/guesty",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "repository": "https://github.com/fern-guesty/guesty-node",
     "files": [
         "dist",
